@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Fade from 'react-reveal/Fade'
+import { Slide } from 'react-awesome-reveal'
 function Section({
     title,
     description,
@@ -10,14 +10,14 @@ function Section({
 
     return (
         <Wrap bgImage={backgroundImg}>
-            <Fade bottom>
+            <Slide direction="up" cascade triggerOnce>
                 <ItemText>
                     <h1> {title}</h1>
                     <p> {description}</p>
                 </ItemText>
-            </Fade>
+            </Slide>
             <FooterGroup>
-                <Fade bottom>
+                <Slide direction="up" cascade triggerOnce>
                     <ButtonGroup>
                         <LeftButton>
                             {leftBtnTxt}
@@ -28,7 +28,7 @@ function Section({
                             </RightButton>
                         }
                     </ButtonGroup>
-                </Fade>
+                </Slide>
                 <DownArrow src="images/down-arrow.svg" />
             </FooterGroup>
         </Wrap>
